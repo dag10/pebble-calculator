@@ -289,6 +289,11 @@ void calc_engine_set_rpn_mode(CalcEngine *engine, bool rpn) {
 }
 
 void calc_engine_handle_action(CalcEngine *engine, CalcAction action) {
+  if (action == CALC_ACTION_TMP_TOGGLE_RPN) {
+    calc_engine_set_rpn_mode(engine, !engine->rpn_mode);
+    return;
+  }
+
   // Backspace / Clear
   if (action == CALC_ACTION_BACKSPACE || action == CALC_ACTION_CLEAR) {
     if (engine->error) {

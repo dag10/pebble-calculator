@@ -46,8 +46,10 @@ static bool prv_button_visible(CalcButton idx) {
   if (!s_engine) return false;
   switch (idx) {
   case CALC_BUTTON_EQUALS:
+  case CALC_BUTTON_TMP_ENABLE_RPN:
     return !s_engine->rpn_mode;
   case CALC_BUTTON_ENTER:
+  case CALC_BUTTON_TMP_DISABLE_RPN:
     return s_engine->rpn_mode;
   default:
     return true;

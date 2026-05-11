@@ -156,6 +156,7 @@ static void prv_window_load(Window *window) {
     bool rpn = persist_read_bool(PERSIST_KEY_RPN_MODE);
     s_engine.rpn_mode = rpn;
   }
+  s_engine.rpn_mode = true; // NOCHECKIN
 
   // Restore main number
   if (persist_exists(PERSIST_KEY_MAIN_NUMBER)) {

@@ -157,6 +157,23 @@ static CalcButtonInfo s_buttons[CALC_BUTTON_COUNT] = {
         .style = BUTTON_STYLE_CLEAR,
         .icon = CALC_ICON_BACKSPACE,
     },
+
+    [CALC_BUTTON_TMP_ENABLE_RPN] = {
+        .row = 0,
+        .col = 1,
+        .label = "R OFF",
+        .action = CALC_ACTION_TMP_TOGGLE_RPN,
+        .style = BUTTON_STYLE_ENTER,
+        .icon = CALC_ICON_NONE,
+    },
+    [CALC_BUTTON_TMP_DISABLE_RPN] = {
+        .row = 0,
+        .col = 1,
+        .label = "R ON",
+        .action = CALC_ACTION_TMP_TOGGLE_RPN,
+        .style = BUTTON_STYLE_ENTER,
+        .icon = CALC_ICON_NONE,
+    },
 };
 
 // Maps grid (row, col) -> CalcButton.

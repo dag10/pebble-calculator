@@ -34,6 +34,7 @@ typedef enum {
   // RPN-specific
   CALC_ACTION_ENTER,     // Push X onto stack
   CALC_ACTION_SWAP,      // Swap X <-> Y
+  CALC_ACTION_TMP_TOGGLE_RPN,
 } CalcAction;
 
 // Pending operator for standard mode
